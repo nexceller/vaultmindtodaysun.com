@@ -1,55 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vaultmindtodaysun.com</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-    }
-    .container {
-      text-align: center;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, #e94560, #f6821f);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    p {
-      font-size: 1.25rem;
-      opacity: 0.8;
-      margin-bottom: 2rem;
-    }
-    .badge {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: rgba(255,255,255,0.1);
-      border-radius: 9999px;
-      font-size: 0.875rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>vaultmindtodaysun.com</h1>
-    <p>Welcome to your new website!</p>
-    <span class="badge">Powered by GitHub Pages</span>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      New analysis explores what may be affecting your memory — and it's not
+      just aging.
+    </title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Crimson Text", "Times New Roman", Times, serif;
+        line-height: 1.8;
+        color: #000;
+        background: #ffffff;
+        min-height: 100vh;
+      }
+
+      .header {
+        background: #000000;
+        color: #ffffff;
+        padding: 40px 20px 50px 20px;
+        position: relative;
+        border-bottom: 4px double #000000;
+      }
+
+      .advertisement {
+        font-family: "Arial", sans-serif;
+        font-size: 10px;
+        color: #999999;
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 400;
+      }
+
+      .title {
+        font-family: "Playfair Display", "Times New Roman", serif;
+        font-size: clamp(28px, 4vw, 48px);
+        font-weight: 900;
+        color: #ffffff;
+        margin: 30px 0 25px 0;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .updated {
+        font-family: "Arial", sans-serif;
+        font-size: 11px;
+        color: #cccccc;
+        text-align: center;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 15px;
+      }
+
+      .content {
+        background: #ffffff;
+        padding: 60px 40px;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+        border-left: 1px solid #000000;
+        border-right: 1px solid #000000;
+      }
+
+      .content p {
+        margin-bottom: 25px;
+        font-size: 19px;
+        color: #000000;
+        line-height: 1.9;
+        text-align: justify;
+        text-indent: 2em;
+      }
+
+      .content p:first-of-type::first-letter {
+        font-family: "Playfair Display", serif;
+        font-size: 72px;
+        font-weight: 900;
+        float: left;
+        line-height: 0.8;
+        margin: 8px 8px 0 0;
+        color: #000000;
+      }
+
+      .quote {
+        font-style: italic;
+        margin: 40px 0;
+        padding: 30px 40px;
+        border-left: 3px solid #000000;
+        border-right: 3px solid #000000;
+        font-size: 22px;
+        color: #000000;
+        line-height: 1.8;
+        text-align: justify;
+        font-weight: 400;
+        background: #f5f5f5;
+        position: relative;
+      }
+
+      .quote::before {
+        content: '"';
+        font-family: "Playfair Display", serif;
+        font-size: 80px;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        color: #000000;
+        opacity: 0.3;
+        line-height: 1;
+      }
+
+      .quote::after {
+        content: '"';
+        font-family: "Playfair Display", serif;
+        font-size: 80px;
+        position: absolute;
+        bottom: -20px;
+        right: 15px;
+        color: #000000;
+        opacity: 0.3;
+        line-height: 1;
+      }
+
+      .cta {
+        margin: 50px 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #000000;
+        background: #ffffff;
+        padding: 15px 0;
+        border-top: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: "Arial", sans-serif;
+      }
+
+      .video-container {
+        margin: 50px 0;
+        text-align: center;
+        border: 2px solid #000000;
+        padding: 10px;
+        background: #ffffff;
+      }
+
+      .video-container a {
+        display: inline-block;
+        transition: opacity 0.3s ease;
+      }
+
+      .video-container a:hover {
+        opacity: 0.9;
+      }
+
+      .video-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #000000;
+      }
+
+      .footer {
+        background: #ffffff;
+        padding: 50px 40px;
+        max-width: 800px;
+        margin: 0 auto;
+        border-top: 1px solid #000000;
+        border-left: 1px solid #000000;
+        border-right: 1px solid #000000;
+        text-align: left;
+      }
+
+      .footer p {
+        font-size: 11px;
+        color: #333333;
+        margin-bottom: 20px;
+        line-height: 1.7;
+        text-align: justify;
+        font-family: "Arial", sans-serif;
+      }
+
+      .footer a {
+        color: #000000;
+        text-decoration: underline;
+        transition: opacity 0.3s ease;
+      }
+
+      .footer a:hover {
+        opacity: 0.7;
+      }
+
+      .footer-bottom {
+        background: #000000;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #000000;
+        font-family: "Arial", sans-serif;
+        font-size: 11px;
+      }
+
+      .footer-bottom a {
+        color: #ffffff;
+        text-decoration: underline;
+        margin: 0 10px;
+        transition: opacity 0.3s ease;
+        font-weight: 400;
+      }
+
+      .footer-bottom a:hover {
+        opacity: 0.7;
+      }
+
+      .copyright {
+        text-align: center;
+        font-size: 10px;
+        color: #666666;
+        margin-bottom: 15px;
+        font-family: "Arial", sans-serif;
+      }
+
+      .divider {
+        border-top: 1px solid #000000;
+        margin: 30px 0;
+      }
+
+      @media (max-width: 768px) {
+        .content {
+          padding: 40px 25px;
+          border-left: none;
+          border-right: none;
+        }
+        .quote {
+          padding: 25px;
+          font-size: 20px;
+        }
+        .cta {
+          font-size: 16px;
+          padding: 12px 0;
+        }
+        .title {
+          font-size: 28px;
+        }
+        .content p {
+          font-size: 17px;
+        }
+        .footer {
+          border-left: none;
+          border-right: none;
+        }
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+        .header {
+          border-bottom: 2px solid #000000;
+        }
+        .video-container {
+          border: 1px solid #000000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="advertisement">Advertisement</div>
+      <h1 class="title">
+        New analysis explores what may be affecting your memory — and it's not
+        just aging.
+      </h1>
+      <div class="updated">Updated: March 4, 2025</div>
+    </div>
+
+    <div class="content">
+      <p>
+        For many years, it has been common to hear that changes in energy,
+        focus, or memory naturally occur over time. These topics are frequently
+        discussed in relation to the aging process.
+      </p>
+
+      <div class="divider"></div>
+
+      <p>
+        Some researchers have taken interest in understanding various natural
+        substances from a scientific perspective. This includes familiar items
+        such as honey, which has long been used in everyday diets.
+      </p>
+
+      <p>
+        Current studies examine the composition of honey to better document its
+        natural characteristics. These investigations do not position honey as a
+        method for addressing health conditions or improving specific functions.
+      </p>
+
+      <p class="quote">
+        "Honey remains primarily known as a food ingredient, and ongoing
+        research focuses on understanding its components without attributing
+        health effects or suggesting outcomes."
+      </p>
+
+      <p class="cta">
+        Tap the button to learn more about how honey fits into general
+        discussions about food and daily dietary choices.
+      </p>
+
+      <div class="video-container">
+        <a href="https://todaysunbetter.com/vsl-01/">
+          <img src="assets/castanha2.png" alt="castanha com mel" />
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>
+        Trademarks utilized on our website belong to their respective owners and
+        no implied or expressed endorsement of our website or services is
+        intended. Through in-depth research and experienced editors we provide
+        feedback about products and services. We are independently owned, and
+        opinions expressed here are our own. This website is an independent
+        professional comparison and review site supported by referral fees from
+        the sites and products featured.
+      </p>
+
+      <p>
+        <strong>Disclaimer:</strong> This content is intended for adults over 18
+        years old. The information provided on this site is for educational and
+        informational purposes only and should not be considered medical advice.
+        Always consult with a qualified healthcare professional before starting
+        any new diet, supplement, or health program. Results may vary.
+        Individual outcomes depend on factors such as age, genetics, lifestyle,
+        and overall health. Product ingredients are clearly listed on the
+        official product label. This page is an advertorial, not a news article
+        or medical publication.
+      </p>
+
+      <p class="copyright">©2025 Memory Lift. All Rights Reserved.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p><a href="#">Privacy Policy</a></p>
+      <a href="#">Support</a> • <a href="#">Terms of Service</a> •
+      <a href="#">Privacy Policy</a>
+    </div>
+  </body>
 </html>
